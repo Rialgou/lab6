@@ -8,15 +8,14 @@ class PriorityQueueUnsorted : public PriorityQueueADT{
 
 private:
 	vector<int> _arr;
-
-
 public:
 	PriorityQueueUnsorted();
 	~PriorityQueueUnsorted();
 	bool empty();
 	int size();
 	int top();
-	void push(int);
+	void push(int n);
 	void pop();
+	
 };
 #endif

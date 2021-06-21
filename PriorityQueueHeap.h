@@ -7,7 +7,10 @@ class PriorityQueueHeap : public PriorityQueueADT{
 
 private:
 	vector<int> _arr;
-
+	int tam;
+	int right(int i);
+	int left(int i);
+	int parent(int i);
 
 public:
 	PriorityQueueHeap();
@@ -15,7 +18,9 @@ public:
 	bool empty();
 	int size();
 	int top();
-	void push(int);
+	void push(int n);
 	void pop();
+	void upHeap(int n);
+	void downHeap(int n);
 };
 #endif
