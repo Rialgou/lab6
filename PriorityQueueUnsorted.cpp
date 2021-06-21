@@ -17,7 +17,7 @@ int PriorityQueueUnsorted::size(){
 int PriorityQueueUnsorted::top(){
 	int min = INT_MAX;
 	if(!empty()){
-		for(int i=0,i<_arr.size();i++){
+		for(int i=0;i<_arr.size();i++){
 			if(_arr[i]<min)min=_arr[i];
 		}
 		return min;
