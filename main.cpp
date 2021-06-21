@@ -18,7 +18,7 @@ void HeapSort(vector<int> &vec){
 	}
 }
 
-void SelectionSort(vector<int> &vec){
+void SelectionSort(vector<int> vec){
 	PriorityQueueUnsorted *pqu = new PriorityQueueUnsorted();
 	int tam = vec.size();
 	for(int i=0;i<tam;i++){
