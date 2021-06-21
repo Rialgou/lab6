@@ -18,7 +18,7 @@ void HeapSort(vector<int> &vec){
 	}
 }
 
-void SelectionSort(vector<int> vec){
+void SelectionSort(vector<int> &vec){
 	PriorityQueueUnsorted *pqu = new PriorityQueueUnsorted();
 	int tam = vec.size();
 	for(int i=0;i<tam;i++){
@@ -32,8 +32,8 @@ void SelectionSort(vector<int> vec){
 }
 
 int main(){
-	vector <int> v1 ={5,4,3,2,6};
-	vector <int> v2 ={5,4,3,2,6};
+	vector <int> v1 ={5,4,3,2,6,9,10};
+	vector <int> v2 ={5,4,3,2,6,9,10};
 	HeapSort(v1);
 	cout<<"el ordenamiento HeapSort queda: "<<endl;
 	for(int i=0;i<v1.size();i++){
