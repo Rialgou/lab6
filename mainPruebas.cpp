@@ -43,20 +43,23 @@ int main(){
 	for(int i=0;i<n;i++){
 		_arr1.push_back(i+1);
 	}
-	random_shuffle (_arr1.begin(),_arr1.end() );
-	//cout<<_arr1[4]<<endl;
-	clock_t start = clock();
-	HeapSort(_arr1);
-	clock_t end = clock();
-	timePQH+= (double)(end-start)/CLOCKS_PER_SEC;
 	for(int i=0;i<n;i++){
 		_arr2.push_back(i+1);
 	}
-	random_shuffle (_arr2.begin(),_arr2.end() );
-	clock_t start2 = clock();
-	SelectionSort(_arr2);
-	clock_t end2 = clock();
-	timePQU+= (double)(end2-start2)/CLOCKS_PER_SEC;
+	for (int i = 0; i < rep; ++i)
+	{
+		random_shuffle (_arr1.begin(),_arr1.end() );
+		//cout<<_arr1[4]<<endl;
+		clock_t start = clock();
+		HeapSort(_arr1);
+		clock_t end = clock();
+		timePQH+= (double)(end-start)/CLOCKS_PER_SEC;
+		random_shuffle (_arr2.begin(),_arr2.end() );
+		clock_t start2 = clock();
+		SelectionSort(_arr2);
+		clock_t end2 = clock();
+		timePQU+= (double)(end2-start2)/CLOCKS_PER_SEC;
+	}
 	printf("Tiempo HeapSort: %.10f\n\n",timePQH/(double)rep );
 	printf("Tiempo SelectionSort : %.10f\n\n",timePQU/(double)rep );
 	return 0;
